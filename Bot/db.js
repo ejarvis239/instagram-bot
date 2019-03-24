@@ -8,8 +8,10 @@ const config = require("./config/db_config");
 
 firebase.initializeApp({
     credential: firebase.credential.cert(config),
-    databaseURL: 'https://ig-bot-demo.firebaseio.com'
+    databaseURL: 'https://dearbump-ec981.firebaseio.com'
 });
+
+
 let database = firebase.database();
 
 const following = (param = '') => database.ref(`following/${param}`);
